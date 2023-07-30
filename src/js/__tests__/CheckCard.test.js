@@ -1,5 +1,4 @@
 import { CheckCard } from "../CheckCard";
-import expect from "expect";
 
 // I want to describe test function luhnAlgorithm with 10 groups of data collection
 

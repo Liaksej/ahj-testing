@@ -5,6 +5,7 @@ export class DOMEvents {
     this.form = document.querySelector(".form-inline");
     this.cards = document.querySelector(".cards");
     this.input = document.querySelector("#card_number");
+    this.submit = document.querySelector("#submitform");
     this.res = document.querySelector(".result");
     this.checkCard = new CheckCard();
   }
@@ -27,8 +28,8 @@ export class DOMEvents {
                                   The length of the number for this card type is ${resultLength}`;
         } else {
           this.res.innerHTML = `The card number ${cardNumber} is invalid<br>
-                                  Luhn algorythm is ${resultLuhn}<br>
-                                  The length of the number for this card type is ${resultLength}`;
+                                  Luhn algorythm is undefined<br>
+                                  The length of the number for this card type is undefined`;
         }
       }
     };
