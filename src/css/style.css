@@ -21,7 +21,7 @@ h3 {
 }
 
 .glyphicon {
-  vertical-align: 0% !important;
+  vertical-align: 0 !important;
   margin-left: 5px;
 }
 
@@ -65,11 +65,13 @@ h3 {
 }
 
 .card {
+  position: relative;
   float: left;
   width: 39px;
   height: 25px;
   text-indent: -9999px;
   background-position: 0 0;
+  background-size: 39px;
   margin-right: 4px;
 }
 
@@ -83,27 +85,39 @@ h3 {
 }
 
 .card.visa {
-  background-image: url(../img/card-visa.gif);
+  background-image: url(../img/pepsized-visa.png);
 }
 
 .card.amex {
-  background-image: url(../img/card-amex.gif);
+  background-image: url(../img/pepsized-americanexpress01.png);
 }
 
 .card.jcb {
-  background-image: url(../img/card-jcb.gif);
+  background-image: url(../img/pepsized-jcb.png);
 }
 
 .card.master {
-  background-image: url(../img/card-mastercard.gif);
+  background-image: url(../img/pepsized-mastercard.png);
 }
 
 .card.discover {
-  background-image: url(../img/card-discover.gif);
+  background-image: url(../img/pepsized-discover.png);
 }
 
-.card.diners_club {
-  background-image: url(../img/card-diners.gif);
+.card.dinersClub {
+  background-image: url(../img/pepsized-dinersclub02.png);
+}
+
+.card.unionPay {
+  background-image: url(../img/unionpay.png);
+}
+
+.card.mir {
+  background-image: url(../img/mir.jpg);
+}
+
+.card.maestro {
+  background-image: url(../img/pepsized-maestro.png);
 }
 
 .btn-success:hover {
@@ -232,4 +246,8 @@ button {
   text-shadow: none;
   display: inline-block;
   text-align: start;
+}
+
+.opacity {
+  filter: grayscale(100%);
 }

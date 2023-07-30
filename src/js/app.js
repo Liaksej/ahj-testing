@@ -1,14 +1,9 @@
-import { CheckCard } from "./CheckCard.js";
-
-const cardNumber = "4716310046525812";
+import { DOMEvents } from "./DOMEvents.js";
 
 function app() {
-  // document.body.innerHTML = drawGameField(FILED_LENGTH);
-  const cardChecker = new CheckCard();
-  const cardSystem = cardChecker.getCardType(cardNumber);
-  const algorithm = cardChecker.luhnAlgorithm(cardNumber);
-
-  console.log(cardSystem, algorithm);
+  const evenTracker = new DOMEvents();
+  evenTracker.eventLuhnAlgorithm();
+  evenTracker.eventPaymentSystemCheck();
 }
 
 app();
