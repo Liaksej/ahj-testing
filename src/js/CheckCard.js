@@ -39,17 +39,16 @@ export class CheckCard {
   #cardType = null;
 
   luhnAlgorithm(cardNumber) {
-    let check_digit = 0;
-    for (let i = cardNumber.length - 2; i >= 0; --i) {
-      check_digit +=
-        (i & 1) === 0
-          ? Number(cardNumber[i]) > 4
-            ? Number(cardNumber[i]) * 2 - 9
-            : Number(cardNumber[i]) * 2
-          : Number(cardNumber[i]);
+    let ch = 0;
+    const isOdd = cardNumber.length % 2 !== 0;
+
+    for (let i = 0; i < cardNumber.length; i++) {
+      let n = parseInt(cardNumber[i], 10);
+
+      ch += (isOdd | 0) === i % 2 && 9 < (n *= 2) ? n - 9 : n;
     }
 
-    return 10 - (check_digit % 10) === Number(cardNumber.slice(-1));
+    return 0 === ch % 10;
   }
 
   getCardType(cardNumber) {
